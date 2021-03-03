@@ -90,32 +90,7 @@ background: url(./assets/images/pic_1.jpg);
     padding: 50px;
 }
 
-.videoThumbmail1 {
-    background: url(./assets/images/thumbnail_1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-top-left-radius: 4px;
-    width: 200px;
-    height: 140px;
-}
-.videoThumbmail2 {
-    background: url(./assets/images/thumbnail_2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-top-left-radius: 4px;
-    width: 200px;
-    height: 140px;
-}
-.videoThumbmail3 {
-    background: url(./assets/images/thumbnail_3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-top-left-radius: 4px;
-    width: 200px;
-    height: 140px;
-}
-.videoThumbmail4 {
-    background: url(./assets/images/thumbnail_4.jpg);
+.videoThumbmail {
     background-size: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 4px;
@@ -123,6 +98,15 @@ background: url(./assets/images/pic_1.jpg);
     height: 140px;
 }
 
+.videoThumbmail-item {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+}
+
+.videoThumbmail-play {
+    z-index: 2;
+}
 .videoUserInfoPhoto {
     width: 40px;
     border-radius: 50%;
@@ -135,6 +119,7 @@ background: url(./assets/images/pic_1.jpg);
 .video-item {
     width: 200px;
     height: 100%;
+    overflow: visible;
 }
 
 .videoUserInfoName {
@@ -212,6 +197,16 @@ input::placeholder {
 .loader {
     border: 10px solid #f3f3f3;
     border-top: 10px solid #C271FF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+.loader2 {
+    border: 10px solid #C271FF;
+    border-top: 10px solid #bcbcbc;
     border-radius: 50%;
     width: 80px;
     height: 80px;
