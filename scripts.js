@@ -3,103 +3,67 @@ $(document).ready(() => {
         let div = document.getElementById("loader");
         let carousel = document.getElementById("carouselExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.add("loader");
+            carousel.classList.add("d-none");
+        }, 0);
     }
 
     function unloader() {
         let div = document.getElementById("loader");
         let carousel = document.getElementById("carouselExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader4");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.remove("loader");
+            carousel.classList.remove("d-none");
+        }, 2000);
     }
 
     function loader2() {
         let div = document.getElementById("loader2");
         let carousel = document.getElementById("carousel2ExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader2");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.add("loader2");
+            carousel.classList.add("d-none");
+        }, 0);
     }
 
     function unloader2() {
         let div = document.getElementById("loader2");
         let carousel = document.getElementById("carousel2ExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader2");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.remove("loader2");
+            carousel.classList.remove("d-none");
+        }, 2000);
     }
 
     function loader3() {
         let div = document.getElementById("loader3");
         let carousel = document.getElementById("carousel3ExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader3");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.add("loader");
+            carousel.classList.add("d-none");
+        }, 0);
     }
 
     function unloader3() {
         let div = document.getElementById("loader3");
         let carousel = document.getElementById("carousel3ExampleControls");
 
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader3");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
+        setTimeout(() => {
+            div.classList.remove("loader");
+            carousel.classList.remove("d-none");
+        }, 2000);
     }
 
-    function loader4() {
-        let div = document.getElementById("loader4");
-        let carousel = document.querySelector(".carouselExampleControls");
-
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader4");
-                carousel.classList.add("d-none");
-            }, 0);
-        }
-    }
-
-    function unloader4() {
-        let div = document.getElementById("loader4");
-        let carousel = document.getElementById("carousel4ExampleControls");
-
-        if (div) {
-            setTimeout(() => {
-                div.classList.add("loader4");
-                carousel.classList.add("d-none"); 
-            }, 0);
-        }
-    }
-
-    function quotes2() {
-        let principalDiv = document.getElementById("carousel4Space");
+    function quotes() {
+        let principalDiv = document.getElementById("carouselSpace");
         let active = "active";
         let inactive = "inactive";
-        loader4();
+        loader();
         $.ajax({
             url: "https://smileschool-api.hbtn.info/quotes",
             type: "GET",
@@ -132,7 +96,7 @@ $(document).ready(() => {
                 alert("Error");
             },
         });
-        unloader4();
+        unloader();
     }
     function quotes() {
         let principalDiv = document.getElementById("carouselSpace");
@@ -272,7 +236,6 @@ $(document).ready(() => {
         unloader3();
     }
     quotes();
-    quotes2();
     videos();
     videos2();
 });
